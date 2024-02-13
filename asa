@@ -1,0 +1,12 @@
+sudo chmod 644 /etc/logrotate.d/chainflip
+sudo chown root.root /etc/logrotate.d/chainflip
+
+Bidding & Staking
+
+sudo systemctl restart chainflip-engine
+
+tail -f /var/log/chainflip-engine.log
+
+sudo chainflip-cli \
+      --config-path /etc/chainflip/config/Default.toml \
+      register-account-role Validator
